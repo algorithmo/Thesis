@@ -6,8 +6,6 @@ const DB = require('mongodb').MongoClient;
 var fs = require('fs');
 
 var unamepass = process.env.MONGODB_USER +':'+ process.env.MONGODB_PASSWORD + '@';
-console.log (unamepass);
-
 
 var url = 'mongodb://'+unamepass+'172.30.103.123:27017/nodejs-db';
 
