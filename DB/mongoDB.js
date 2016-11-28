@@ -6,10 +6,11 @@ const DB = require('mongodb').MongoClient;
 var fs = require('fs');
 
 
-var url = 'mongodb://172.30.103.123:27017/nodejs-db';
+var url = 'mongodb://admin:CHu4gx7mJwGPVKhg@172.30.103.123:27017/nodejs-db';
 
 
-//connect to DB
+//connect to DB with no Auth
+function Connect(url){
 DB.connect(url,(err,db) =>{
     if (err){
         console.log(err);
@@ -26,14 +27,22 @@ DB.connect(url,(err,db) =>{
 
                 collection.insert(json, (err, res) => {
 
-                    if (err) console.log(err);
+                    if (err){
+                      console.log(err);
+                      return false;
+                    }
                     else {
                           console.log('%d records inserted', res.insertedCount);
                           db.close();
+                          return true;
                        }
                     });
             }
         });
 
     }
-});
+  });
+
+}
+
+Connect(url);
