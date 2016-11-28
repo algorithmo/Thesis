@@ -6,7 +6,7 @@ const DB = require('mongodb').MongoClient;
 var fs = require('fs');
 
 
-var url = 'mongodb://104.236.217.94:27017/users';
+var url = 'mongodb://172.30.103.123:27017/nodejs-db';
 
 
 //connect to DB
