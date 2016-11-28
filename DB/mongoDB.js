@@ -17,7 +17,7 @@ DB.connect(url,(err,db) =>{
         console.log(err);
 
     }else{
-        console.log("Connect succuss to: "+ url);
+        console.log("Connect succuss to mongo Server ");
         var collection = db.collection('users');
 
         fs.readFile('users.json', 'utf8',  (err, data) => {
