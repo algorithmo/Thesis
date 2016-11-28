@@ -18,7 +18,7 @@ DB.connect(url,(err,db) =>{
         console.log("Connect succuss to: "+ url);
         var collection = db.collection('users');
 
-        fs.readFile('users.json', 'utf8',  (err, data) => {
+        fs.readFile('./users.json', 'utf8',  (err, data) => {
             if (err)  console.log(err);
             else {
                 console.log('read from file .json Success');
