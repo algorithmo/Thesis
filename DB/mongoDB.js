@@ -10,14 +10,14 @@ var unamepass = process.env.MONGODB_USER +':'+ process.env.MONGODB_PASSWORD + '@
 var url = 'mongodb://'+unamepass+'172.30.103.123:27017/nodejs-db';
 
 
-//connect to DB with no Auth
+//connect to DB with Auth
 function Connect(url){
 DB.connect(url,(err,db) =>{
     if (err){
         console.log(err);
 
     }else{
-        console.log("Connect succuss to mongo Server ");
+        console.log("Connecting success to mongodb Server ");
         var collection = db.collection('users');
 
         fs.readFile('users.json', 'utf8',  (err, data) => {

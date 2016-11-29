@@ -1,0 +1,15 @@
+
+extends layout
+append styles
+  link(rel="stylesheet", href="./public/css/index.css")
+append body
+  .row
+    .col-md-10.text-center
+      .panel.panel-primary.text-center
+        .panel-heading
+          h2.panel-title Wellcome
+        .panel-body
+          form(action='/review', method='post')
+            input(type='text', name='review')
+            button.btn.btn-primary Send
+            h2 test

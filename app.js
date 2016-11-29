@@ -4,10 +4,11 @@
 
 const  eventEmitter = require('events')
 const  server       = require("./server");
-const  router       = require('./router');
+const  router       = require('./app/router');
+const  favicon      = require('serve-favicon');
 
 
-
+favicon('favicon.ico')
 server.Start(router.route);
 
 
