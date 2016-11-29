@@ -50,4 +50,4 @@ var data = [
 });*/
 
 mongodb.Insert('users2',data);
-mongodb.Select('users',{rating: {$gt: 4.0}});
+mongodb.Select('users2',{rating: {$gt: 4.0}});
