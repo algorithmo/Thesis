@@ -12,7 +12,7 @@ class  MongoDB
           this.DB = DB;
       }
 
-   Select(dbname,criterie = {})
+   Select(dbname,criterie={})
    {
 
      if(typeof criterie !== 'object'  )
@@ -83,7 +83,7 @@ class  MongoDB
              });
        }
 
-       Update(dbname,criterie,action)
+       Update(dbname,criterie={},action={})
        {
          if(typeof criterie !== 'object'  || typeof action !== 'object' )
          {
