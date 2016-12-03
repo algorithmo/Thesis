@@ -8,7 +8,7 @@ const  router       = require('./app/router');
 const  favicon      = require('serve-favicon');
 
 
-favicon('favicon.ico')
+favicon('./favicon.ico')
 server.Start(router.route);
 
 
